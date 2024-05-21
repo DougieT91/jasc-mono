@@ -1,0 +1,8 @@
+logging:
+  level:
+    org.springframework.web: DEBUG
+    ROOT: ERROR
+    com:
+      tawandr:
+        resumex: DEBUG
+        resumex.utils: TRACE

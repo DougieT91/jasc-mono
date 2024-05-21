@@ -1,0 +1,77 @@
+# ----------------------------------------------------------------------
+# DEFAULT
+# ----------------------------------------------------------------------
+# Default Configurations
+# ----------------------------------------------------------------------
+spring:
+  application:
+    name: tawandr-utils
+  profiles:
+    active: local
+  jackson:
+    deserialization:
+      accept-empty-array-as-null-object: true
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  mvc:
+    async:
+      request-timeout: 70000
+#    contentnegotiation:
+#      favor-parameter: true
+#      favor-path-extension: false
+#      media-types:
+#        json: application/json
+  http:
+    encoding:
+      force-request-content-type: true
+      force-response-content-type: true
+      media-type:
+        default: application/json
+  webclient:
+    connection-providers:
+      pooled:
+        max-connections: 100
+        max-idle-time: 300000
+        acquire-timeout: 30000
+  codec:
+    max-in-memory-size: 11MB
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/resumex?createDatabaseIfNotExist=true&useSSL=false
+    username: postgres
+    password: root
+    hikari:
+      minimum-idle: 0
+      maximum-pool-size: 10
+      connection-timeout: 60000
+      max-lifetime: 120000
+      idle-timeout: 90000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always
+#    generate-ddl: true
+
+  freemarker:
+    cache: true
+    settings:
+      template_update_delay: 0
+springfox:
+
+  documentation:
+    auto-startup: true
+server:
+  address: 0.0.0.0
+  port: 8040
+
+  servlet:
+    context-path: /
