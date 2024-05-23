@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.tawandr</groupId>
         <artifactId>jasc-mono</artifactId>
-        <version>1.0</version>
+        <version>2024.05</version>
     </parent>
 
     <artifactId>project-management-service</artifactId>

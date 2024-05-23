@@ -6,22 +6,20 @@
 
     <groupId>com.tawandr</groupId>
     <artifactId>jasc-mono</artifactId>
-    <version>1.0</version>
+    <version>2024.05</version>
     <packaging>pom</packaging>
-
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <swagger-annotations.version>1.6.4</swagger-annotations.version>
+        <swagger-annotations-v3.version>2.2.20</swagger-annotations-v3.version>
+        <postgresql.version>42.4.3</postgresql.version>
+        <spring-boot.version>3.2.1</spring-boot.version>
     </properties>
 
     <modules>
-        <module>gateway</module>
-        <module>animation-service</module>
-        <module>file-service</module>
-        <module>project-management-service</module>
-        <module>ai-enhancements-service</module>
         <module>gateway</module>
         <module>animation-service</module>
         <module>file-service</module>
@@ -34,10 +32,16 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.0.0</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.tawandr</groupId>
+                <artifactId>utils</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -47,6 +51,7 @@
                 <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

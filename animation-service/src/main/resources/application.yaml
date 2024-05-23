@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------
 spring:
   application:
-    name: tawandr-utils
+    name: animation
   profiles:
     active: local
   jackson:
@@ -11,29 +11,8 @@ spring:
       accept-empty-array-as-null-object: true
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
-#  mvc:
-#    async:
-#      request-timeout: 70000
-#  http:
-#    encoding:
-#      force-request-content-type: true
-#      force-response-content-type: true
-#      media-type:
-#        default: application/json
-#  webclient:
-#    connection-providers:
-#      pooled:
-#        max-connections: 100
-#        max-idle-time: 300000
-#        acquire-timeout: 30000
-#  codec:
-#    max-in-memory-size: 11MB
-#  servlet:
-#    multipart:
-#      max-file-size: 20MB
-#      max-request-size: 20MB
   datasource:
-    url: jdbc:postgresql://localhost:5432/utils?createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:postgresql://localhost:5432/animation?createDatabaseIfNotExist=true&useSSL=false
     username: postgres
     password: root
     hikari:
@@ -52,18 +31,15 @@ spring:
     init:
       mode: always
     generate-ddl: true
-
   freemarker:
     cache: true
     settings:
       template_update_delay: 0
 springfox:
-
   documentation:
     auto-startup: true
 server:
   address: 0.0.0.0
-  port: 8040
-
+  port: 8041
   servlet:
-    context-path: /
+    context-path: /animation
