@@ -11,7 +11,7 @@ eureka:
 
 spring:
   application:
-    name: animation
+    name: files
   profiles:
     active: local
   jackson:
@@ -20,7 +20,7 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
-    url: jdbc:postgresql://localhost:5432/animation?createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:postgresql://localhost:5432/files?createDatabaseIfNotExist=true&useSSL=false
     username: postgres
     password: root
     hikari:
@@ -48,6 +48,6 @@ springfox:
     auto-startup: true
 server:
   address: 0.0.0.0
-  port: 8041
+  port: 8042
   servlet:
-    context-path: /animation
+    context-path: /files

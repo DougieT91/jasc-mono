@@ -22,11 +22,6 @@ public class AnimationController extends CrudResource<Animation> {
     public ResponseEntity<List<String>> createThin(@RequestBody List<String> frames, @PathVariable Long animationId, Principal principal) {
         return null;
     }
-
-    @GetMapping("/status")
-    public String status() {
-        return "Animation Service is running";
-    }
 }
 
 
