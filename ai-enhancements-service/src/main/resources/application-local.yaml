@@ -1,7 +1,7 @@
 logging:
   level:
     org.springframework.web: DEBUG
-    ROOT: ERROR
+    ROOT: INFO
     com:
       tawandr:
-        utils: DEBUG
+        animation: DEBUG
