@@ -101,11 +101,6 @@
                 <artifactId>imgscalr-lib</artifactId>
                 <version>4.2</version>
             </dependency>
-            <dependency>
-                <groupId>com.mortennn</groupId>
-                <artifactId>javagif</artifactId>
-                <version>1.43</version>
-            </dependency>
         <!-- /Animation -->
     </dependencies>
 
