@@ -82,6 +82,31 @@
             <artifactId>commons-io</artifactId>
             <version>2.16.1</version>
         </dependency>
+
+        <!-- Cloud API -->
+        <dependency>
+            <groupId>com.cloudconvert</groupId>
+            <artifactId>cloudconvert-java</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        <!-- /Cloud API -->
+        <!-- Animation -->
+            <dependency>
+                <groupId>com.drewnoakes</groupId>
+                <artifactId>metadata-extractor</artifactId>
+                <version>2.15.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.imgscalr</groupId>
+                <artifactId>imgscalr-lib</artifactId>
+                <version>4.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mortennn</groupId>
+                <artifactId>javagif</artifactId>
+                <version>1.43</version>
+            </dependency>
+        <!-- /Animation -->
     </dependencies>
 
     <build>

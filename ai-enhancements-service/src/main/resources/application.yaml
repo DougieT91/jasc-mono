@@ -51,3 +51,7 @@ server:
   port: 8043
   servlet:
     context-path: /ai
+
+CLOUDCONVERT_API_KEY: <api-key>
+CLOUDCONVERT_SANDBOX: <true|false>
+CLOUDCONVERT_WEBHOOK_SIGNING_SECRET: <secret>

@@ -5,3 +5,5 @@ logging:
     com:
       tawandr:
         animation: DEBUG
+      netflix:
+        discovery: ERROR

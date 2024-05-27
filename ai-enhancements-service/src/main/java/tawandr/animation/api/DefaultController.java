@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import tawandr.animation.business.InterpolationService;
+import tawandr.animation.dto.InterpolationRequest;
+import tawandr.animation.dto.InterpolationResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,9 +28,9 @@ public class DefaultController {
     }
     
     @PostMapping("interpolate")
-    public ResponseEntity<byte[]> interpolate(@RequestBody List<String> images){
-        log.debug("received [{}] images for interpolation", images.size());
-        ResponseEntity<byte[]> responseEntity = ResponseEntity.ok(interpolationService.interpolate(images));
+    public ResponseEntity<InterpolationResponse> interpolate(@RequestBody InterpolationRequest request){
+        log.debug("received images for interpolation: \n{}", request.toString());
+        ResponseEntity<InterpolationResponse> responseEntity = ResponseEntity.ok(interpolationService.interpolate(request));
         log.debug("Interpolation complete");
         return responseEntity;
     }
