@@ -18,7 +18,7 @@ public class InterpolationService {
     private final CloudConvertService cloudConvertService;
     private final LocalGifCreator localConvertService;
     public InterpolationResponse interpolate(InterpolationRequest request) {
-        log.debug("interpolating images using cloud convert api");
+        log.info("interpolating images using cloud convert api");
 
         final List<byte[]> images = request.getImages();
 

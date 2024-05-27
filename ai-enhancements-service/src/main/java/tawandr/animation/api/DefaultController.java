@@ -29,9 +29,9 @@ public class DefaultController {
     
     @PostMapping("interpolate")
     public ResponseEntity<InterpolationResponse> interpolate(@RequestBody InterpolationRequest request){
-        log.debug("received images for interpolation: \n{}", request.toString());
+        log.info("received images for interpolation: \n{}", request.toString());
         ResponseEntity<InterpolationResponse> responseEntity = ResponseEntity.ok(interpolationService.interpolate(request));
-        log.debug("Interpolation complete");
+        log.info("Interpolation complete");
         return responseEntity;
     }
 
